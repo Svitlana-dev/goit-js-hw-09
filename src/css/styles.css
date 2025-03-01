@@ -1,18 +1,200 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-/* Common styles */
-@import url('./reset.css');
-@import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
+body {
+  font-family: 'Montserrat', sans-serif;
+}
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+.back-link {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.back-link:hover {
+  background-color: #2980b9;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-list a {
+  display: inline-block;
+  padding: 20px 40px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  text-transform: uppercase;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/*Task 1*/
+
+.gal {
+  background-color: #0057b7;
+}
+
+.form {
+  background-color: #ffd700;
+}
+
+.nav-list .gal:hover {
+  background-color: #003f87;
+  transform: scale(1.1);
+}
+
+.nav-list .form:hover {
+  background-color: #e6c200;
+  transform: scale(1.1);
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  list-style: none;
+  max-width: 1440px;
+}
+
+.gallery-item {
+  cursor: pointer;
+  position: relative;
+}
+
+.gallery-image {
+  display: block;
+  width: 360px;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery-image:hover {
+  transform: scale(1.04);
+}
+
+.sl-wrapper {
+  background: rgba(46, 47, 66, 0.8);
+}
+
+.sl-prev,
+.sl-next {
+  color: #fff !important;
+}
+
+.sl-close {
+  color: #fff !important;
+  font-size: 32px !important;
+}
+
+.sl-counter {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #fff !important;
+}
+
+/*Task 2*/
+
+.feedback-form {
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 408px;
+  height: 296px;
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-form label {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.feedback-form label:not(:last-of-type) {
+  margin-bottom: 8px;
+}
+
+.feedback-form input {
+  margin-top: 8px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 360px;
+  height: 40px;
+  padding: 8px 10px;
+  font-size: 14px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.feedback-form textarea {
+  margin-top: 8px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 360px;
+  padding: 8px 10px;
+  font-size: 14px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  height: 80px;
+  box-sizing: border-box;
+}
+
+.feedback-form input:hover,
+.feedback-form textarea:hover {
+  border: 1px solid #000;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  border: 1px solid #808080;
+  outline: none;
+}
+
+.feedback-form textarea {
+  resize: none;
+  height: 80px;
+}
+
+.feedback-form button {
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 95px;
+  height: 40px;
+  background: #4e75ff;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 16px;
+}
+
+.feedback-form button:hover {
+  background: #6c8cff;
+}
